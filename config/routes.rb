@@ -6,6 +6,8 @@ Rails.application.routes.draw do
       post 'recipes/create'
       get '/show/:id', to: 'recipes#show'
       delete '/destroy/:id', to: 'recipes#destroy'
+      #post 'users', to: 'registrations#create'
+      devise_for :users
     end
   end
   root 'home#index'
